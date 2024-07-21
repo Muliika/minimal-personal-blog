@@ -1,113 +1,127 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from 'next/image';
+import Newsletter from '@/components/Newsletter';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col my-14 px-5 space-y-20">
+      <section id="hero">
+        <div className="mx-auto w-full max-w-3xl space-y-8">
+          <div className="gap-2 flex justify-between">
+            <div className="flex-col flex flex-1 space-y-1.5">
+              <div className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                Hi, I&lsquo;m Dorian 👋
+              </div>
+              <div className="max-w-[600px] md:text-xl">
+                Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.
+              </div>
+            </div>
+
+              <Avatar className="size-28 border">
+                <AvatarImage alt='profile image' src='/me.png' />
+                <AvatarFallback>initials</AvatarFallback>
+              </Avatar>
+
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
+      <section id="blog" className='mt-5'>
+        {/* <div className="max-w-3xl mx-auto my-10">
+        </div> */}
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold mb-2">Featured blog posts</h1>
+          <p className="text-gray-600 mb-8">Learn how to grow your business with our expert advice.</p>
+          
+          <div className="space-y-8">
+            {/* <!-- Blog Post 1 --> */}
+            {/* Beware that the the size of the image, blog-post heading and description affect the overall height and width of the image and their might be some data that is not displayed because overflow is set to hidden */}
+            <div className="overflow-hidden">
+              <div className="md:flex">
+                <div className="md:flex-shrink-0">
+                  <Image className="h-full w-full object-cover rounded-xl overflow-hidden" src="/bg1.jpg" alt="alt data" width={200} height={400}/>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-gray-600 mb-2">
+                    <span>Mar 16, 2027</span>
+                    <span className="mx-2">•</span>
+                    <span>Marketing</span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2">Boost your conversion rate</h2>
+                  <p className="text-gray-600 mb-4">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.</p>
+                  <div className="flex items-center">
+                    <Image className="h-10 w-10 rounded-full mr-3" src="/me.png" alt="Michael Foster" width={100} height={100}/>
+                    <div>
+                      <p className="font-semibold">Michael Foster</p>
+                      <p className="text-sm text-gray-600">Co-Founder / CTO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* blog post 2 */}
+            <div className="overflow-hidden">
+              <div className="md:flex">
+                <div className="md:flex-shrink-0">
+                  <Image className="h-full w-full object-cover rounded-xl" src="/bg2.jpg" alt="alt data" width={200} height={400}/>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-gray-600 mb-2">
+                    <span>Mar 16, 2027</span>
+                    <span className="mx-2">•</span>
+                    <span>Marketing</span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2">Boost your conversion rate corrupti dicta laboris incididunt</h2>
+                  <p className="text-gray-600 mb-4">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto .</p>
+                  <div className="flex items-center">
+                    <Image className="h-10 w-10 rounded-full mr-3" src="/me.png" alt="Michael Foster" width={100} height={100}/>
+                    <div>
+                      <p className="font-semibold">Michael Foster</p>
+                      <p className="text-sm text-gray-600">Co-Founder / CTO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* blog post 3 */}
+            <div className="overflow-hidden">
+              <div className="md:flex">
+                <div className="md:flex-shrink-0">
+                  <Image className="h-full w-full object-cover rounded-xl" src="/bg3.jpg" alt="alt data" width={200} height={400}/>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-gray-600 mb-2">
+                    <span>Mar 16, 2027</span>
+                    <span className="mx-2">•</span>
+                    <span>Marketing</span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2">Boost your conversion rate corrupti Illo sint voluptas. Error voluptates</h2>
+                  <p className="text-gray-600 mb-4">culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto .</p>
+                  <div className="flex items-center">
+                    <Image className="h-10 w-10 rounded-full mr-3" src="/me.png" alt="Michael Foster" width={100} height={100}/>
+                    <div>
+                      <p className="font-semibold">Michael Foster</p>
+                      <p className="text-sm text-gray-600">Co-Founder / CTO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* load more buttons */}
+      <section id="load-more-btn" className='w-full flex justify-center'>
+          <button className="shadow-[0_0_0_2px_#000000_inset] px-8 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+            All posts
+          </button>
+      </section>
+      {/* load more buttons */}
+      {/* news letter section */}
+      <Newsletter/>
+      {/* news letter section */}
+      
     </main>
   );
 }
+
