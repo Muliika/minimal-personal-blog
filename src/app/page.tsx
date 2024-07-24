@@ -30,7 +30,7 @@ export default function Home() {
         </div> */}
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-2">Featured blog posts</h1>
-          <p className="text-gray-600 mb-8">Learn how to grow your business with our expert advice.</p>
+          <p className="text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, culpa!</p>
           
           <div className="space-y-8">
             {/* <!-- Blog Post 1 --> */}
