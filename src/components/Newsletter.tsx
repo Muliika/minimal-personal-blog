@@ -2,11 +2,11 @@ import React from 'react'
 
 const Newsletter = () => {
   return (
-    <div className="">
+    <div className="my-28 mx-5">
         <div className="relative">
           
           <div className="mx-auto max-w-3xl">
-            <div className="relative overflow-hidden rounded-2xl bg-black px-6 py-10 shadow-xl sm:px-12 sm:py-20">
+            <div className="relative overflow-hidden rounded-2xl bg-black px-6 py-10 shadow-xl sm:px-12 sm:py-20 dark:border-2 dark:border-white">
               <div aria-hidden="true" className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
                 <svg className="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1463 360">
                   <path className="text-gray-700 text-opacity-40" fill="currentColor" d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z" />
@@ -36,3 +36,4 @@ const Newsletter = () => {
 }
 
 export default Newsletter
+
